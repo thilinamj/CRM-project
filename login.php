@@ -1,10 +1,10 @@
 <?php require_once('connection/connection.php');?>
  <?php
-$first_name='chamith';
-$last_name='sandupaama';
-$email='manda@gmail.com';
-$password='jayakody';
-$phone_num='0777454223'; 
+$first_name='sunil';
+$last_name='liyanage';
+$email='sunil@gmail.com';
+$password='gamage';
+$phone_num='0757885552'; 
 $position='staff';
 
 $hashed_password=sha1($password);

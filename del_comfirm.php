@@ -4,6 +4,12 @@ include_once 'dbconnect.php';
 
 $query = $DBcon->query("SELECT * FROM user WHERE user_id =".$_SESSION['userSession']);
 $userRow=$query->fetch_array();
+
+$user_id = $_SESSION["userSession3"] ;
+$query = $DBcon->query("SELECT * FROM user WHERE user_id =".$user_id);
+$row=$query->fetch_array();
+
+
 $DBcon->close();
 
 ?>
@@ -25,14 +31,14 @@ $DBcon->close();
 <h2><center>Delete user</center></h2>
 </header>          
         
-<?php echo "User ID    :". $userRow['user_id']."</br>"; ?>
-<?php echo "User Name  : ". $userRow['name']."&nbsp ".$userRow['name1']."</br>"; ?>
-<?php echo "Position   :". $userRow['position']; ?>
+<?php echo "User ID    :". $row['user_id']."</br>"; ?>
+<?php echo "User Name  : ". $row['first_name']."&nbsp ".$row['last_name']."</br>"; ?>
+<?php echo "Position   :". $row['position']; ?>
 
 <footer>
 
 <center>        
-<input type="button" value="Yes" accesskey="y" onclick="window.location.href='del_user.php?user_id=<?php echo $userRow["user_id"]; ?>'" />
+<input type="button" value="Yes" accesskey="y" onclick="window.location.href='del_user.php?user_id=<?php echo $row["user_id"]; ?>'" />
          
 <input type="button" value="Cancel" accesskey="c" onclick="window.location.href='admin_home.php?back'" />       
 </center>

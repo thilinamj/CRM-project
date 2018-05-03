@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require_once 'dbconnect.php';
-/*
+
 if(!isset($_SESSION['userSession'])) {
 include_once("logout.php");
 exit;
@@ -10,7 +10,7 @@ $u_id=$_SESSION['userSession'];
 $query = $DBcon->query("SELECT * FROM user where user_id= '$u_id'");
 $userRow=$query->fetch_array();
 
-}*/
+}
 $user_id = $_SESSION["userSession3"] ;
 
 if(isset($_POST['reset']))

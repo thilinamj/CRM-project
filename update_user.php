@@ -1,12 +1,13 @@
 <?php 
 session_start();
 require_once 'dbconnect.php';
-/*
+
 if(!isset($_SESSION['userSession'])) {
 include_once("logout.php");
 exit;
-}*/
-		
+}
+	
+
 if(isset($_POST['edit']))
 {		
 $name=$_POST['name'];
@@ -14,6 +15,8 @@ $name1=$_POST['name1'];
 $email=$_POST['email'];
 $phone=$_POST['phone'];
 $position=$_POST['position'];
+
+
 
 $user_id = $_SESSION["userSession3"] ;
 
@@ -69,7 +72,7 @@ $DBcon->close();
 
 
 <footer>
-<button type="submit" accesskey="s" name="edit">
+<button type="submit"  name="edit">
 &nbsp; Submit
 </button>
 
